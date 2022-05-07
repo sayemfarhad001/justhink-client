@@ -1,0 +1,85 @@
+.employee{
+    &__container{
+            // border: 1px black solid;
+        // border-radius: 5px
+
+
+        // position: absolute;
+        width: 240px;
+        height: 357px;
+        left: 223px;
+        top: 224px;
+
+        background: #F4F9FD;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    &__text{
+        // width: 95px;
+        // height: 19px;
+        // left: 287px;
+        // top: 245px;
+        padding: 4px 11px;
+
+        text-align: center;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 19px;
+        /* identical to box height */
+        
+        
+        color: #1A2429;
+    }
+    &__picture-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &__picture{
+        width: 106px;
+        height: 107px;
+        background-color: yellow;
+        border: 1px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    &__picture--text-container{
+               margin-left: 8rem;
+    }
+    &__picture--text{
+        // margin-left: 2rem;
+        margin-bottom: 0.5rem;
+        background-color: #83A9C3;
+        border-radius: 20px;
+        padding: 4px 11px;
+    }
+
+
+    &__schedule{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__schedule-text{
+        box-sizing: border-box;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 0.737903px solid #183B54;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.8rem;
+        border-radius: 50%;
+        // line-height: 9px;
+        /* identical to box height */
+
+        text-align: center;
+    }
+
+}

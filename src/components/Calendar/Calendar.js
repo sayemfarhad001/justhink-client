@@ -1,4 +1,7 @@
-const Calendar = () => {
+import React from "react";
+import "./Calendar.scss"
+
+const Calendar = ({ calendar }) => {
     return ( 
         <div className="user__calendar">
             <h4 className="user__subtitle">CALENDAR</h4>
