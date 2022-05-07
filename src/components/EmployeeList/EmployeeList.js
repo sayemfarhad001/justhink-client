@@ -1,6 +1,7 @@
-import User from "../User/User"
+// import User from "../User/User"
+import Employee from "../Employee/Employee";
 import "./EmployeeList.scss"
-const EmployeeList = ({users}) => {
+const EmployeeList = ({ users }) => {
     return ( 
         <section className="dashboard__main">
            <div className="dashboard__navbar">
@@ -26,17 +27,20 @@ const EmployeeList = ({users}) => {
             <div className="dashboard__card-container">
                 {   users.map(  (elem) => {
                         return (
-                            <User
+                            <Employee
                                 key={elem.id}
                                 id={elem.id}
                                 name={elem.name}
-                                address={elem.address}
+                                // address={elem.address}
+                                comfort={elem.comfort}
                                 role={elem.role}
-                                city={elem.city}
-                                country={elem.country}
-                                phone={elem.phone}
-                                email={elem.email}
-                                calendar={elem.calendar}
+                                skills={elem.skills}
+                                office={elem.office}
+                                // city={elem.city}
+                                // country={elem.country}
+                                // phone={elem.phone}
+                                // email={elem.email}
+                                // calendar={elem.calendar}
                             />
                         ); 
                 }   )  }

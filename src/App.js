@@ -2,6 +2,9 @@ import "./App.scss";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
+
+import User from "./components/User/User"
+import EmployeeList from "./components/EmployeeList/EmployeeList";
 // import HomePage from "./pages/HomePage/HomePage";
 // import Header from "./components/Header/Header";
 // import Footer from "./components/Footer/Footer";
@@ -20,6 +23,9 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Dashboard} />
+            <Route path="/employees" render={(props)=>{<EmployeeList users={this.state.users} match={props.match}/>}}/>
+            <Route path="/employees/:id" render={(props)=>{<User users={this.state.users} match={props.match}/>}}/>
+            {/* <Route exact path="/employees/:id" component={User} /> */}
           </Switch>
           {/* <Header />
           <Switch>
