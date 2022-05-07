@@ -1,0 +1,59 @@
+/* Rectangle 234 */
+
+.dashboard {
+    &__navbar{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 5rem;
+    }
+    &__searchbar{
+        box-sizing: border-box;
+
+        margin-right: 5rem;
+        // position: absolute;
+        width: 369px;
+        height: 43px;
+        left: 209px;
+        top: 130px;
+        padding-left: 10px;
+        
+        background: #FBFCFF;
+        border: 1px solid #83A9C4;
+        border-radius: 30px;
+    }
+    &__positionsort{
+        /* Group 13883 */
+
+        margin-right: 1rem;
+        // position: absolute;
+        width: 115px;
+        height: 43px;
+        left: 696px;
+        top: 130px;
+        padding-left: 10px;
+        background: #FBFCFF;
+        border: 1px solid #83A9C4;
+        border-radius: 30px;
+
+    }
+    &__skillsort{
+        /* Group 13882 */
+
+
+        // position: absolute;
+        width: 115px;
+        height: 43px;
+        left: 841px;
+        top: 129px;
+        padding-left: 10px;
+        background: #FBFCFF;
+        border: 1px solid #83A9C4;
+        border-radius: 30px;
+    }
+    
+    &__card-container {
+        width: auto;
+        display: flex;
+    }
+}
+
