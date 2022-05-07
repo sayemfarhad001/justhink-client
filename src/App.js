@@ -1,7 +1,7 @@
 import "./App.scss";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Dashboard from "./component/Dashboard/Dashboard"
+import Dashboard from "./components/Dashboard/Dashboard";
 // import HomePage from "./pages/HomePage/HomePage";
 // import Header from "./components/Header/Header";
 // import Footer from "./components/Footer/Footer";
@@ -18,9 +18,9 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-            <Switch>
-                <Route exact path="/" component={Dashboard} />
-            </Switch>
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+          </Switch>
           {/* <Header />
           <Switch>
             <Route exact path="/" component={HomePage} />
