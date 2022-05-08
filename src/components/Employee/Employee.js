@@ -2,8 +2,11 @@ import React from "react";
 import "./Employee.scss";
 import { Link } from "react-router-dom";
 
-const Employee = ({key, id, name, comfort, role, skills, office}) => {
-    return (
+
+
+const Employee = ({key, id, name, username, comfort, role, skills, office}) => { 
+	let background = require(`../../assets/images/${username}.jpg`);
+	return (
 		<Link className="employee__link" to={`employees/${id}`}>
 			<div key={key} className="employee__container">
 				<div className="employee__row" id={id}>
@@ -16,12 +19,14 @@ const Employee = ({key, id, name, comfort, role, skills, office}) => {
 					</div>
 					<div className="employee__picture-container">
 						{/* <h4 className="employee__subtitle">NAME</h4> */}
-						<div className="employee__picture">
+						<div className="employee__picture" 
+							style={{ backgroundImage: `url(${background})` }}>
+							{/* <img src={require(`../../assets/images/${name}.jpg`)} alt="" className="employee__image">
+							</img> */}
 							<div className="employee__text employee__picture--text-container">
-								<p className="employee__picture--text">Online</p>
+									<p className="employee__picture--text">Online</p>
 							</div>
 						</div>
-
 					</div>
 					<div className="employee__comfort-level">
 						{/* <h4 className="employee__subtitle">ADDRESS</h4> */}
@@ -51,14 +56,51 @@ const Employee = ({key, id, name, comfort, role, skills, office}) => {
 						<div className="employee__schedule">
 										{/* <h4 className="user__subtitle">In Office</h4> */}
 										{/* <p className="employee__text"></p> */}
-										<p className="employee__text employee__schedule-text" style={{ color:`${office[0]}`, backgroundColor: `${office[0]}` }} >M</p>
-										<p className="employee__text employee__schedule-text" style={{ backgroundColor: `${office[1]}` }} >T</p>
-										<p className="employee__text employee__schedule-text" style={{ backgroundColor: `${office[2]}` }} >W</p>
-										<p className="employee__text employee__schedule-text" style={{ backgroundColor: `${office[3]}` }} >TH</p>
-										<p className="employee__text employee__schedule-text" style={{ backgroundColor: `${office[4]}` }} >F</p>
-										<p className="employee__text employee__schedule-text" style={{ backgroundColor: `${office[5]}` }} >SA</p>
-										<p className="employee__text employee__schedule-text" style={{ backgroundColor: `${office[6]}` }} >SU</p>
-									</div>
+									{/* {id={condition ? 'msg' : null}} */}
+										 
+							<p className="employee__schedule-text" 
+								style={ office[0] 
+									? { color:"white", backgroundColor: "#183B54" }
+									: { color:"#183B54", backgroundColor: "white" }
+								} 
+							>M</p>
+							<p className="employee__schedule-text" 
+								style={ office[1] 
+									? { color:"white", backgroundColor: "#183B54" }
+									: { color:"#183B54", backgroundColor: "white" }
+								} 
+							>T</p>
+							<p className="employee__schedule-text" 
+								style={ office[2] 
+									? { color:"white", backgroundColor: "#183B54" }
+									: { color:"#183B54", backgroundColor: "white" }
+								} 
+							>W</p>
+							<p className="employee__schedule-text" 
+								style={ office[3] 
+									? { color:"white", backgroundColor: "#183B54" }
+									: { color:"#183B54", backgroundColor: "white" }
+								} 
+							>TH</p>
+							<p className="employee__schedule-text" 
+								style={ office[4] 
+									? { color:"white", backgroundColor: "#183B54" }
+									: { color:"#183B54", backgroundColor: "white" }
+								} 
+							>F</p>
+							<p className="employee__schedule-text" 
+								style={ office[5] 
+									? { color:"white", backgroundColor: "#183B54" }
+									: { color:"#183B54", backgroundColor: "white" }
+								} 
+							>SA</p>
+							<p className="employee__schedule-text" 
+								style={ office[6] 
+									? { color:"white", backgroundColor: "#183B54" }
+									: { color:"#183B54", backgroundColor: "white" }
+								} 
+							>SU</p>				
+						</div>
 						{/* <p>{office.map((elem)=>{
 							    return ( 
 									
