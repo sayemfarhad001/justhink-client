@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 
 
 const Employee = ({key, id, name, username, comfort, role, skills, office}) => { 
-	let background = require(`../../assets/images/${username}.jpg`);
+	// let background = ;
 	return (
 		<Link className="employee__link" to={`employees/${id}`}>
 			<div key={key} className="employee__container">
-				<div className="employee__row" id={id}>
+				<div className="employee__card" id={id}>
+					
 					<div className="employee__name">
 						{/* <h4 className="employee__subtitle">NAME</h4> */}
 						<div className="employee__text">
@@ -17,24 +18,28 @@ const Employee = ({key, id, name, username, comfort, role, skills, office}) => {
 							{/* <img alt="chevron" src={chevron} /> */}
 						</div>
 					</div>
+					
 					<div className="employee__picture-container">
 						{/* <h4 className="employee__subtitle">NAME</h4> */}
 						<div className="employee__picture" 
-							style={{ backgroundImage: `url(${background})` }}>
-							{/* <img src={require(`../../assets/images/${name}.jpg`)} alt="" className="employee__image">
+							
+							// style={{ backgroundImage: `url(${require(`../../assets/images/${username}.jpg`)})` }}
+							>
+							{/* <img src={require(`../../assets/images/${username}.jpg`)} alt="" className="employee__image">
 							</img> */}
+
 							<div className="employee__text employee__picture--text-container">
 									<p className="employee__picture--text">Online</p>
 							</div>
 						</div>
 					</div>
+					
 					<div className="employee__comfort-level">
 						{/* <h4 className="employee__subtitle">ADDRESS</h4> */}
 						<p className="employee__text employee__comfort-level-text" style={{ backgroundColor: `${comfort}` }}>
 							COVID 19 Comfort Level
 						</p>
 					</div>
-					
 					
 					<div className="employee__role">
 						{/* <h4 className="employee__subtitle">ROLE</h4> */}
