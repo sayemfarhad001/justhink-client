@@ -3,7 +3,6 @@
   width: 112px;
   position: fixed;
   top: 80px;
-  left: 0;
   background-color:#617F94;
   overflow-x: hidden;
   padding-top: 20px;
@@ -18,8 +17,8 @@
   display: block;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
+.sidenav img:hover {
+  border: 0.01rem  solid #ffffff;
 }
 
 
