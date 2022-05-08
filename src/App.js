@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 
 import User from "./components/User/User"
 import EmployeeList from "./components/EmployeeList/EmployeeList";
+import SideBar from "./components/SideBar/SideBar";
 // import HomePage from "./pages/HomePage/HomePage";
 // import Header from "./components/Header/Header";
 // import Footer from "./components/Footer/Footer";
@@ -21,12 +22,14 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
+        
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route path="/employees" render={(props)=>{<EmployeeList users={this.state.users} match={props.match}/>}}/>
             <Route path="/employees/:id" render={(props)=>{<User users={this.state.users} match={props.match}/>}}/>
             {/* <Route exact path="/employees/:id" component={User} /> */}
           </Switch>
+          <SideBar/>
           {/* <Header />
           <Switch>
             <Route exact path="/" component={HomePage} />
