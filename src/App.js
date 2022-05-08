@@ -2,6 +2,7 @@ import "./App.scss";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Header from "./components/Header/Header"
 
 import User from "./components/User/User"
 import EmployeeList from "./components/EmployeeList/EmployeeList";
@@ -22,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-        
+        <Header />
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route path="/employees" render={(props)=>{<EmployeeList users={this.state.users} match={props.match}/>}}/>
