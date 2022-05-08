@@ -25,7 +25,7 @@ const Employee = ({key, id, name, comfort, role, skills, office}) => {
 					</div>
 					<div className="employee__comfort-level">
 						{/* <h4 className="employee__subtitle">ADDRESS</h4> */}
-						<p className="employee__text" style={{ backgroundColor: `${comfort}` }}>
+						<p className="employee__text employee__comfort-level-text" style={{ backgroundColor: `${comfort}` }}>
 							COVID 19 Comfort Level
 						</p>
 					</div>
