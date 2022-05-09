@@ -3,8 +3,9 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Header from "./components/Header/Header"
+import axios from "axios";
 
-import User from "./components/User/User"
+// import User from "./components/User/User"
 import EmployeeList from "./components/EmployeeList/EmployeeList";
 import SideBar from "./components/SideBar/SideBar";
 // import HomePage from "./pages/HomePage/HomePage";
@@ -19,6 +20,17 @@ import SideBar from "./components/SideBar/SideBar";
 // import EditItemPage from "./pages/EditItemPage/EditItemPage";
 
 class App extends Component {
+  state = {
+    users: [],
+    selectedUser: []
+  };
+
+  componentDidMount() {
+    axios.get(`http://localhost:8080/dashboard`).then((response) => {
+      this.setState({ users: response.data });
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -26,8 +38,8 @@ class App extends Component {
         <Header />
           <Switch>
             <Route exact path="/" component={Dashboard} />
-            <Route path="/employees" render={(props)=>{<EmployeeList users={this.state.users} match={props.match}/>}}/>
-            <Route path="/employees/:id" render={(props)=>{<User users={this.state.users} match={props.match}/>}}/>
+            <Route exact path="/employees" render={(props)=>{<EmployeeList users={this.state.users} {...props}/>}}/>
+            {/* <Route path="/employees/:id" render={(props)=>{<User users={this.state.users} match={props.match}/>}}/> */}
             {/* <Route exact path="/employees/:id" component={User} /> */}
           </Switch>
           <SideBar/>

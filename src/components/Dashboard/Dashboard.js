@@ -1,22 +1,13 @@
 import React from "react";
-import axios from "axios";
+
 import "./Dashboard.scss";
-import User from "../User/User";
-import EmployeeList from "../EmployeeList/EmployeeList";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+// import User from "../User/User";
+// import EmployeeList from "../EmployeeList/EmployeeList";
+// import { BrowserRouter, Route, Switch } from "react-router-dom";
 import task from "../../assets/images/13929.png"
 
 export default class Dashboard extends React.Component {
-  state = {
-    users: [],
-    selectedUser: []
-  };
 
-  componentDidMount() {
-    axios.get(`http://localhost:8080/dashboard`).then((response) => {
-      this.setState({ users: response.data });
-    });
-  }
   // getName() {
   //   let person = prompt("Please enter your name");
   //   if (person != null) {
@@ -32,7 +23,7 @@ export default class Dashboard extends React.Component {
     return (
       <main>
         {/* <p id="demo"></p> */}
-               {/* <EmployeeList users={this.state.users}/> */}
+           
         {/* <User user={this.state.selectedUser[0]} setId={this.setState} /> */}
         {/* <BrowserRouter>
           <Switch>
@@ -54,7 +45,7 @@ export default class Dashboard extends React.Component {
                  </div>
                  <div className="task-wrapper">
                    <h3 className="task-title">My Tasks</h3>
-                   <img src={task}></img>
+                   <img alt="" src={task}></img>
                  </div>
   </div>
 
