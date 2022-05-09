@@ -1,0 +1,10 @@
+.announcements-main {
+  display: flex;
+  flex-direction: column;
+}
+.announcements-main-item {
+  height: 200px;
+  width: 200px;
+  margin-left: 500px;
+  background-color: red;
+}

@@ -1,55 +1,36 @@
-.dashboard-main{
-    display: flex;
-    width: 100%;
+.dashboard-main {
+  width: 100%;
+}
+.dashboard-info-wrapper {
+  display: flex;
 }
 
-.dashboard__container {
-    // padding-left: 100px;
-    width: auto;
-    display: flex;
-    width: 100%;
+.dashboard-wrapper {
+  margin-left: 10rem;
 }
-.dashboard-main-wrapper{
-    display: flex;
-
+.dashboard-info {
+  width: 878px;
+  height: 236px;
+  background-color: #f4f9fd;
 }
-.dashboard-info-wrapper{
-margin-top: 5rem;
-display: flex;
-
+.task-wrapper {
+  margin-left: 10rem;
 }
 
-.dashboard-wrapper{
-    margin-left:  10rem;
+.task-progression {
+  display: flex;
 }
-.dashboard-info{
-
-width: 878px;
-height: 236px;
-background-color:#F4F9FD;
+.task-finished {
+  width: 177px;
+  height: 105px;
+  margin-right: 5rem;
+  background-color: #f4f9fd;
 }
-.task-wrapper{
-    margin-left: 10rem;
+.task-remaining {
+  width: 177px;
+  height: 105px;
+  background-color: #f4f9fd;
 }
-.dashboard-main-wrapper{
-    display: flex;
+.booking-info-wrapper {
+  display: flex;
 }
-.task-progression{
-    display: flex;
-    
-}
-.task-finished{
-    width: 177px;
-height: 105px;
-    margin-right: 5rem;
-    background-color: #F4F9FD;
-}
-.task-remaining{
-    width: 177px;
-height: 105px;
-background-color: #F4F9FD;
-}
-.booking-info-wrapper{
-    display: flex;
-}
-

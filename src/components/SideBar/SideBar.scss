@@ -1,9 +1,13 @@
 .sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
   height: 100%;
   width: 112px;
   position: fixed;
-  top: 80px;
-  background-color:#617F94;
+  top: 0px;
+  background-color: #617f94;
   overflow-x: hidden;
   padding-top: 20px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -18,10 +22,5 @@
 }
 
 .sidenav img:hover {
-  border: 0.01rem  solid #ffffff;
+  border: 0.01rem solid #ffffff;
 }
-
-
-
-
-
