@@ -1,7 +1,9 @@
-h1, h4, p {
-    margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
+h1,
+h4,
+p {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 // a {
@@ -9,6 +11,6 @@ h1, h4, p {
 // }
 
 .App {
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
 }
