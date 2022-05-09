@@ -23,7 +23,7 @@ const Employee = ({key, id, name, username, comfort, role, skills, office}) => {
 						{/* <h4 className="employee__subtitle">NAME</h4> */}
 						<div className="employee__picture" 
 							
-							// style={{ backgroundImage: `url(${require(`../../assets/images/${username}.jpg`)})` }}
+							style={{ backgroundImage: `url(${require(`../../assets/images/${username}.jpg`)})` }}
 							>
 							{/* <img src={require(`../../assets/images/${username}.jpg`)} alt="" className="employee__image">
 							</img> */}
@@ -55,7 +55,7 @@ const Employee = ({key, id, name, username, comfort, role, skills, office}) => {
 
 					<div className="employee__office">
 						{/* <h4 className="employee__subtitle">COUNTRY</h4> */}
-						<p className="employee__text">
+						<p className="employee__text employee__schedule-title-text">
 							In Office
 						</p>
 						<div className="employee__schedule">
@@ -113,7 +113,8 @@ const Employee = ({key, id, name, username, comfort, role, skills, office}) => {
 						})}</p> */}
 					</div>
 
-					<div className="employee__icons">
+					<div className="employee__card-button-container">
+						<button className="employee__card-button"> See Full Calendar</button>
 						{/* <img
 							className="employee__icon--left"
 							src={deleteIcon}
@@ -128,6 +129,7 @@ const Employee = ({key, id, name, username, comfort, role, skills, office}) => {
 							/>
 						</Link> */}
 					</div>
+					
 				</div>
 			</div>
       	</Link>
