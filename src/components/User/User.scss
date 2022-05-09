@@ -1,16 +1,128 @@
-.user__container {
-    // border: 1px black solid;
-    // border-radius: 5px
+.user{
+    &__container{
+        padding: 10rem;
+        width: 240px;
+        height: 357px;
+        left: 223px;
+        top: 224px;
 
+        background: #F4F9FD;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+    &__text{
+        padding: 4px 11px;
+        text-align: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #1A2429;
+    }
 
-    // position: absolute;
-    // width: 240px;
-    // height: 357px;
-    // left: 223px;
-    // top: 224px;
+    &__card {
+        display: flex;
+        flex-direction: column;
+    }
+    &__name{
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    &__status{
+        width: 1rem;
+        height: 1.5rem;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
 
-    // background: #F4F9FD;
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    // border-radius: 20px;
-    // text-decoration: none;
+    &__picture-container{
+        padding-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__picture{
+        width: 5rem;
+        height: 5rem;
+        background-size: 100px;
+        background-position: center;
+        border: 1.5px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    &__picture--text-container{
+        margin-left: 8rem;
+        font-size: smaller;
+    }
+    &__picture--text{
+        margin-bottom: 0.5rem;
+        background-color: #83A9C3;
+        border-radius: 20px;
+        padding: 4px 11px;
+    }
+
+    &__comfort-level{
+        padding-top: 1rem;
+        align-self: center;
+    }
+    &__comfort-level-text{
+        border-radius: 20px;
+        width: fit-content;
+        font-size: smaller;
+    }
+
+    &__role{
+        padding-top: 0.8rem;
+    }
+    &__skills{
+        min-height: 2.75rem;
+        // max-width: 12rem;
+        // align-self: center;
+        > p{
+            font-size: smaller;
+        }
+    }
+
+    &__schedule{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__schedule-title-text{
+        text-align: start;
+        padding-left: 1.2rem;
+        font-size: smaller;
+    }
+
+    &__schedule-text{
+        box-sizing: border-box;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 0.737903px solid #183B54;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.8rem;
+        border-radius: 50%;
+        padding-top: 4px;
+        text-align: center;
+    }
+    &__card-button-container{
+        padding-top: 1rem;
+        align-self: center;
+        width: auto;
+    }
+    &__card-button{
+        padding: 0.2rem 2rem;
+        border-radius: 20px;
+        
+        background-color: #183B54;
+        color: white;
+    }
 }

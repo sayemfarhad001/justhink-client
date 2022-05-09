@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Employee = ({key, id, name, username, comfort, role, skills, office}) => { 
+const Employee = ({key, id, name, username, status, workfrom, comfort, role, skills, office}) => { 
 	// let background = ;
 	return (
 		<Link className="employee__link" to={`employees/${id}`}>
@@ -17,6 +17,7 @@ const Employee = ({key, id, name, username, comfort, role, skills, office}) => {
 							<p>{name}</p>
 							{/* <img alt="chevron" src={chevron} /> */}
 						</div>
+						<div className="employee__status" style={{ backgroundImage: `url(${require(`../../assets/icons/${workfrom}.png`)})` }}></div>
 					</div>
 					
 					<div className="employee__picture-container">
@@ -29,7 +30,7 @@ const Employee = ({key, id, name, username, comfort, role, skills, office}) => {
 							</img> */}
 
 							<div className="employee__text employee__picture--text-container">
-									<p className="employee__picture--text">Online</p>
+									<p className="employee__picture--text">{status}</p>
 							</div>
 						</div>
 					</div>

@@ -29,8 +29,19 @@
     }
     &__name{
         padding-top: 1rem;
+        display: flex;
+        justify-content: center;
     }
-
+    &__status{
+        width: 1rem;
+        height: 1.5rem;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
     &__picture-container{
         padding-top: 0.5rem;
         display: flex;
@@ -57,6 +68,7 @@
         background-color: #83A9C3;
         border-radius: 20px;
         padding: 4px 11px;
+        width: max-content;
     }
 
     &__comfort-level{

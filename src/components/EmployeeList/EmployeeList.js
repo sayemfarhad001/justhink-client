@@ -33,6 +33,8 @@ const EmployeeList = ({ users }) => {
                                 id={elem.id}
                                 name={elem.name}
                                 username={elem.username}
+                                status={elem.status}
+                                workfrom={elem.workfrom}
                                 // address={elem.address}
                                 comfort={elem.comfort}
                                 role={elem.role}
