@@ -14,6 +14,8 @@ class App extends Component {
   state = {
     users: [],
     selectedUser: [],
+    islogged: false,
+    loggedinUserId: ""
   };
 
   componentDidMount() {
@@ -22,6 +24,31 @@ class App extends Component {
     });
   }
 
+  getName() {
+    let person = prompt("Please enter your username");
+    if ( 
+          !this.state.islogged 
+          && 
+          person != null 
+          // && 
+          // this.state.loggedinUserId === ""
+      ) {
+      let user = this.state.users.filter((elem) => elem.username === person )
+      // console.log(user[0].id)
+        this.setState({loggedinUserId: user[0].id})     
+        this.setState({islogged: true})
+        // window.location.reload();     
+    } else {
+      // alert("Access denied! Please contact administrator for details.");
+    //   window.location.reload();
+    }
+  }
+
+  componentDidUpdate() {
+    this.getName();
+    console.log(this.state.loggedinUserId)
+    console.log(this.state.islogged)  
+  }
   render() {
     return (
       <div className="App">

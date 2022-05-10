@@ -3,7 +3,7 @@ import "./Employee.scss";
 import { Link } from "react-router-dom";
 
 const Employee = ({
-  key,
+  // key,
   id,
   name,
   username,
@@ -18,7 +18,7 @@ const Employee = ({
   // let background = ;
   return (
     <Link className="employee__link" to={`employees/${id}`}>
-      <div key={key} className="employee__container">
+      <div key={id} className="employee__container">
         <div className="employee__card" id={id}>
           <div className="employee__name">
             {/* <h4 className="employee__subtitle">NAME</h4> */}

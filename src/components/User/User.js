@@ -4,14 +4,14 @@ import "./User.scss";
 
 import Calendar from "../Calendar/Calendar"
 
-const User = (props) => {
-    // let newId = this.props
+	const User = (props) => {
+
 	let {users, match} = props
 	let user = users.filter((elem)=>elem.id===match.params.id)
-	const {key, id, name, username, comfort, role, skills, allskills, office, city, country, phone, email, calendar, status, workfrom, tasks} = user[0]
+	const {id, name, username, comfort, role, skills, allskills, office, city, country, phone, email, calendar, status, workfrom, tasks} = user[0]
 	
 	return (
-		<div key={key} className="user__container">
+		<div key={id} className="user__container">
 				
 			{/* PROFILE LEFT */}
 			<div className="user__profile--left" id={id}>
@@ -136,7 +136,7 @@ const User = (props) => {
 				<div className="user__profile--right-top">
 					<div className="user__tasks-container">
 						{ tasks.map ((elem)=>
-							<div className="user__task">
+							<div key={elem.type} className="user__task">
 								<div className="user__task-icon user__profile__icon" style={{ backgroundImage: `url(${require(`../../assets/icons/${elem.type}.png`)})` }}></div>
 								<h4>{elem.header}</h4>
 								<p className="user__text">Deadline: {elem.deadline}</p>
