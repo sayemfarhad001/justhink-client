@@ -1,0 +1,51 @@
+.user{
+    &__calendar{
+        // >p {
+        //     >b{
+        //         margin-bottom: 5px;
+        //     }
+
+        // }
+        display: flex;
+
+        &-container{
+
+            display: flex;
+            flex-direction: column;
+            
+        }
+        &__top{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 1rem;
+        }
+        &-button{
+            padding: 0.5rem 2rem;
+            border-radius: 20px;
+            
+            background-color: #183B54;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        &__text{
+            width: 12.5%;
+            height: 5rem;
+            background-color: #E5E5E5;
+            border: 0.737903px solid #183B54;
+            border-radius: 5px;
+            margin-right: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+    }
+}
+
+.user__calendar__text:hover {
+    box-shadow: 4px 4px 4px #183B54;
+    color:"white";
+    background-color: "#183B54";
+    transform: scaleX(1.2) scaleY(1.2);
+}

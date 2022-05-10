@@ -14,6 +14,8 @@ class App extends Component {
   state = {
     users: [],
     selectedUser: [],
+    islogged: false,
+    loggedinUserId: ""
   };
 
   componentDidMount() {
@@ -22,6 +24,22 @@ class App extends Component {
     });
   }
 
+  getName() {
+    // let person = prompt("Please enter your username");
+    let person = "mark-devon"
+    if ( !this.state.islogged && person != null ) {
+      let user = this.state.users.filter((elem) => elem.username === person )[0];
+      this.setState({islogged: true, selectedUser: [ user, ...this.state.selectedUser], loggedinUserId: user.id});     
+    } else if (person == null){
+      this.getName();
+    }
+  }
+
+  componentDidUpdate() {
+    this.getName();
+    console.log(this.state.loggedinUserId)
+    console.log(this.state.islogged)  
+  }
   render() {
     return (
       <div className="App">
@@ -34,7 +52,7 @@ class App extends Component {
               exact
               path="/employees"
               render={(props) => (
-                <EmployeeList users={this.state.users} {...props} />
+                <EmployeeList users={this.state.users} loggedinUserId={this.state.loggedinUserId} {...props} />
               )}
             />
             <Route

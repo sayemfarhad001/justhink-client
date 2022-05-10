@@ -1,32 +1,31 @@
-// import User from "../User/User"
 import Employee from "../Employee/Employee";
 import "./EmployeeList.scss"
 
-const EmployeeList = ({ users }) => {
-    return ( 
+const EmployeeList = ({ users, loggedinUserId }) => {
+    return (         
         <section className="employee-list">
            <div className="employee-list__navbar">
                 <div className="employee-list__searchbar__container">
-                    <label for="search"></label>
+                    <label htmlFor="search"></label>
                     <input className="employee-list__searchbar" type="text" id="search" name="search" required
                         placeholder="Search By Name"
-                        minlength="4" maxlength="8" size="10"></input>
+                        minLength="4" maxLength="8" size="10"></input>
                 </div>
                 <div className="employee-list__positionsort__container">
-                    <label for="search"></label>
-                    <input className="employee-list__positionsort" type="text" id="search" name="search" required
+                    <label htmlFor="positionsort"></label>
+                    <input className="employee-list__positionsort" type="text" id="positionsort" name="positionsort" required
                         placeholder="Position"
-                        minlength="4" maxlength="8" size="10"></input>
+                        minLength="4" maxLength="8" size="10"></input>
                 </div>
                 <div className="employee-list__skillsort__container">
-                    <label for="search"></label>
-                    <input className="employee-list__skillsort" type="text" id="search" name="search" required
+                    <label htmlFor="skillsort"></label>
+                    <input className="employee-list__skillsort" type="text" id="skillsort" name="skillsort" required
                         placeholder="Skill"
-                        minlength="4" maxlength="8" size="10"></input>
+                        minLength="4" maxLength="8" size="10"></input>
                 </div>
             </div>
             <div className="employee-list__card-container">
-                {   users.map(  (elem) => {
+                {   users.filter(elem=>elem.id!==loggedinUserId).map(  (elem) => {
                         return (
                             <Employee
                                 key={elem.id}
