@@ -2,17 +2,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  justify-content: flex-start;
+  // margin-top: 5rem;
   height: 100%;
   width: 112px;
   position: fixed;
   top: 0px;
   background-color: #617f94;
+  overflow-y: hidden;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 6rem;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   &__settings {
     margin-top: 38rem;
+  }
+  &__container {
+    background-color: #617f94;
+    height: 100%;
+    z-index: -1;
   }
 }
 .sidenav img {

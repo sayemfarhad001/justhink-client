@@ -1,226 +1,226 @@
-.user{
-    &__container{
-        padding-left: 10rem;
-        padding-top: 5rem;
-        display: flex;
-        width: 90%;
-        text-align: left;
+.user {
+  &__container {
+    height: 92vh;
+    padding-left: 5rem;
+    display: flex;
+    width: 95%;
+    text-align: left;
+  }
+  &__text {
+    padding: 4px 11px;
+    text-align: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #1a2429;
+    &--title {
+      text-align: left;
+      padding-left: 2rem;
+      font-size: larger;
+      font-weight: bolder;
     }
-    &__text{
-        padding: 4px 11px;
-        text-align: center;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        color: #1A2429;
-        &--title{
-            text-align: left;
-            padding-left: 2rem;
-            font-size: larger;
-            font-weight: bolder;
-        }
-    }
+  }
 
-    ///////////////////////////////////////////////////////////////////
-    // PROFILE LEFT STYLING
-    &__profile--left{
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        width: 25rem;
-        background-color: #F4F9FD;
+  ///////////////////////////////////////////////////////////////////
+  // PROFILE LEFT STYLING
+  &__profile--left {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    background-color: #f4f9fd;
+  }
+  &__city {
+    padding: 2rem;
+  }
+  &__timezone {
+    padding-bottom: 2rem;
+  }
+  &__phone {
+    padding-bottom: 2rem;
+  }
+  &__email {
+    padding-bottom: 2rem;
+  }
+  &__profile__icon-container {
+    text-align: center;
+  }
+  &__profile__icon {
+    padding: 1rem;
+    max-width: 4rem;
+    max-height: 4rem;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    &__text {
+      font-size: larger;
+      font-weight: bolder;
     }
-    &__city{
-        padding: 2rem;
+  }
+  &__status {
+    width: 1rem;
+    height: 1.5rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__picture-container {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__picture {
+    width: 10rem;
+    height: 10rem;
+    background-size: 15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__picture--text-container {
+    margin-left: 8rem;
+    font-size: smaller;
+  }
+  &__picture--text {
+    margin-bottom: 0.5rem;
+    background-color: #83a9c3;
+    border-radius: 20px;
+    padding: 4px 11px;
+  }
+  &__comfort-level {
+    padding-top: 1rem;
+    align-self: center;
+  }
+  &__comfort-level-text {
+    border-radius: 20px;
+    width: fit-content;
+    font-size: smaller;
+  }
+  &__role {
+    padding-top: 0.8rem;
+  }
+  &__skills {
+    min-height: 2.75rem;
+    > p {
+      font-size: smaller;
     }
-    &__timezone{
-        padding-bottom: 2rem;
-    }
-    &__phone{
-        padding-bottom: 2rem;
-    }
-    &__email{
-        padding-bottom: 2rem;
-    }
-    &__profile__icon-container{
-        text-align: center;
-    }
-    &__profile__icon{
-        padding: 1rem;
-        max-width: 4rem;
-        max-height: 4rem;
-    }
-    &__card {
-        display: flex;
-        flex-direction: column;
-    }
-    &__name{
-        padding-top: 1rem;
-        display: flex;
-        justify-content: center;
-        &__text{
-            font-size: larger;
-            font-weight: bolder;
-        }
-    }
-    &__status{
-        width: 1rem;
-        height: 1.5rem;
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    &__picture-container{
-        padding-top: 0.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__picture{
-        width: 10rem;
-        height: 10rem;
-        background-size: 15rem;
-        background-position: center;
-        background-repeat: no-repeat;
-        border: 1.5px solid black;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    &__picture--text-container{
-        margin-left: 8rem;
-        font-size: smaller;
-    }
-    &__picture--text{
-        margin-bottom: 0.5rem;
-        background-color: #83A9C3;
-        border-radius: 20px;
-        padding: 4px 11px;
-    }
-    &__comfort-level{
-        padding-top: 1rem;
-        align-self: center;
-    }
-    &__comfort-level-text{
-        border-radius: 20px;
-        width: fit-content;
-        font-size: smaller;
-    }
-    &__role{
-        padding-top: 0.8rem;
-    }
-    &__skills{
-        min-height: 2.75rem;
-        > p{
-            font-size: smaller;
-        }
-    }
-    &__schedule{
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 0.5rem;
-    }
-    &__schedule-title-text{
-        text-align: start;
-        padding-left: 1.2rem;
-        font-size: smaller;
-    }
-    &__schedule-text{
-        box-sizing: border-box;
-        width: 2rem;
-        height: 2rem;
-        border: 0.737903px solid #183B54;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1rem;
-        border-radius: 50%;
-        padding-top: 6px;
-        text-align: center;
-    }
-    &__card-button-container{
-        padding-top: 1rem;
-        align-self: center;
-        width: auto;
-    }
-    &__card-button{
-        padding: 0.2rem 2rem;
-        border-radius: 20px;
-        background-color: #183B54;
-        color: white;
-    }
+  }
+  &__schedule {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0.5rem;
+  }
+  &__schedule-title-text {
+    text-align: start;
+    padding-left: 1.2rem;
+    font-size: smaller;
+  }
+  &__schedule-text {
+    box-sizing: border-box;
+    width: 2rem;
+    height: 2rem;
+    border: 0.737903px solid #183b54;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding-top: 6px;
+    text-align: center;
+  }
+  &__card-button-container {
+    padding-top: 1rem;
+    align-self: center;
+    width: auto;
+  }
+  &__card-button {
+    padding: 0.2rem 2rem;
+    border-radius: 20px;
+    background-color: #183b54;
+    color: white;
+  }
 
-    ////////////////////////////////////////////////////////////////
-    // PROFILE RIGHT STYLING
-    &__profile--right{
-        display: flex;
-        flex-direction: column;
-        width: 75rem;
-        background-color: #E5E5E5;
-        padding: 5rem;
-        
-        &-top{
-            display: flex; 
-            justify-content: space-between;  
-        }
-        &-bottom{
-            padding: 5rem;
-            border-radius: 10px;
-            background-color: #FDFEFF;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            margin: 1rem;            
-        }
+  ////////////////////////////////////////////////////////////////
+  // PROFILE RIGHT STYLING
+  &__profile--right {
+    display: flex;
+    flex-direction: column;
+    width: 75rem;
+    background-color: #e5e5e5;
+    padding: 5rem;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
     }
-    &__task{
-        padding: 1rem;
-        border-radius: 30px;
-        background-color: #FDFEFF;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        margin: 1rem;
-        display: flex;
-        &__subdiv{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: flex-start;
-            &__text{
-                font-size: larger;
-                min-height: 1rem;
-            }
-        }
+    &-bottom {
+      padding: 5rem;
+      border-radius: 10px;
+      background-color: #fdfeff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin: 1rem;
     }
-    &__allskills{
-        padding: 1rem;
-        padding-right: 2rem;
-        border-radius: 10px;
-        width: 12rem;
-        background-color: #FDFEFF;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        margin: 1rem;
-        &__list-item{
-            list-style: none;
-            text-decoration: none;
-            text-align: start;
-            font-size: larger;
-        }
+  }
+  &__task {
+    padding: 1rem;
+    border-radius: 30px;
+    background-color: #fdfeff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 1rem;
+    display: flex;
+    &__subdiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      &__text {
+        font-size: larger;
+        min-height: 1rem;
+      }
     }
+  }
+  &__allskills {
+    padding: 1rem;
+    padding-right: 2rem;
+    border-radius: 10px;
+    width: 12rem;
+    background-color: #fdfeff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 1rem;
+    &__list-item {
+      list-style: none;
+      text-decoration: none;
+      text-align: start;
+      font-size: larger;
+    }
+  }
 }
 
-
-.user__task:hover, .user__allskills:hover {
-    box-shadow: 4px 4px 4px #183B54;
-    transform: scaleX(1.2) scaleY(1.2);
+.user__task:hover,
+.user__allskills:hover {
+  box-shadow: 4px 4px 4px #183b54;
+  transform: scaleX(1.2) scaleY(1.2);
 }
 
 .user__profile--right-bottom:hover {
-    box-shadow: 4px 4px 4px #183B54;
-    transform: scaleX(1.1) scaleY(1.1) translate(0, 20px);
+  box-shadow: 4px 4px 4px #183b54;
+  transform: scaleX(1.1) scaleY(1.1) translate(0, 20px);
 }
-.user__picture:hover{
-    transform: scaleX(1.2) scaleY(1.2); 
+.user__picture:hover {
+  transform: scaleX(1.2) scaleY(1.2);
 }

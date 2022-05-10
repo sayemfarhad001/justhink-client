@@ -29,22 +29,28 @@ export default class Dashboard extends React.Component {
                 <span className="dashboard-info__description__divider"></span>
                 <div className="dashboard-info__description-wrapper">
                   <img src={badgeIcon} alt="badge-icon" />
-                  <p className="dashboard-info__description">
-                    Top Employer Achievement
-                  </p>
-                  <p>
-                    Company named one of Canada’s Top Employer that cares for
-                    Employees’ health and safet
-                  </p>
+                  <div className="description-container">
+                    <p className="dashboard-info__description">
+                      Top Employer Achievement
+                    </p>
+                    <p className="dashboard-info__description">
+                      Company named one of Canada’s Top Employer that cares for
+                      Employees’ health and safet
+                    </p>
+                  </div>
                 </div>
                 <span className="dashboard-info__description__divider"></span>
                 <div className="dashboard-info__description-wrapper">
                   <img src={calendarIcon} alt="calendar-icon" />
-                  <p className="dashboard-info__description">Upcoming Events</p>
-                  <p>
-                    May 15, 2022 is going to be Company’s Employee Appreciation
-                    Day
-                  </p>
+                  <div className="description-container">
+                    <p className="dashboard-info__description">
+                      Upcoming Events
+                    </p>
+                    <p>
+                      May 15, 2022 is going to be Company’s Employee
+                      Appreciation Day
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -53,7 +59,6 @@ export default class Dashboard extends React.Component {
               <img alt="" src={task}></img>
             </div>
           </div>
-
           <div className="dashboard-right">
             <div className="task-progression-wrapper">
               <div className="task-progression">
@@ -82,23 +87,25 @@ export default class Dashboard extends React.Component {
                 <h3 className="booking-wrapper__title">
                   Next Booked On-site Date:
                 </h3>
-                <h3 className="booking-wrapper__title">MAY 10, 2022</h3>
                 <div className="booking-info-wrapper">
-                  <div className="info-left">
-                    <p>Building Name:</p>
-                    <p>Address:</p>
-                    <p>Floor:</p>
-                    <p>Section:</p>
-                    <p>Seat: </p>
-                    <p>Building Status:</p>
-                  </div>
-                  <div className="info-right">
-                    <p>BrainStation</p>
-                    <p>460 King St. W</p>
-                    <p>10</p>
-                    <p>51</p>
-                    <p>27</p>
-                    <p>Fully Open</p>
+                  <h3 className="booking-wrapper__title">MAY 10, 2022</h3>
+                  <div className="booking-container">
+                    <div className="info-left">
+                      <p>Building Name:</p>
+                      <p>Address:</p>
+                      <p>Floor:</p>
+                      <p>Section:</p>
+                      <p>Seat: </p>
+                      <p>Building Status:</p>
+                    </div>
+                    <div className="info-right">
+                      <p>BrainStation</p>
+                      <p>460 King St. W</p>
+                      <p>10</p>
+                      <p>51</p>
+                      <p>27</p>
+                      <p>Fully Open</p>
+                    </div>
                   </div>
                 </div>
               </div>
