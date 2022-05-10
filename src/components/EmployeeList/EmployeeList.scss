@@ -1,51 +1,51 @@
 @import "../../styles/Global.scss";
 
 .employee-list {
-    padding-top: 7rem;
-    padding-left: 150px;
-    &__navbar{
-        display: flex;
-        justify-content: flex-start;
-    }
-    &__searchbar{
-        box-sizing: border-box;
-        margin-right: 5rem;
-        width: 369px;
-        height: 43px;
-        left: 209px;
-        top: 130px;
-        padding-left: 10px;
-        background: #FBFCFF;
-        border: 1px solid #83A9C4;
-        border-radius: 30px;
-    }
-    &__positionsort{
-        margin-right: 1rem;
-        width: 115px;
-        height: 43px;
-        left: 696px;
-        top: 130px;
-        padding-left: 10px;
-        background: #FBFCFF;
-        border: 1px solid #83A9C4;
-        border-radius: 30px;
-    }
-    &__skillsort{
-        width: 115px;
-        height: 43px;
-        left: 841px;
-        top: 129px;
-        padding-left: 10px;
-        background: #FBFCFF;
-        border: 1px solid #83A9C4;
-        border-radius: 30px;
-    }
-    &__card-container {
-        // max-width: 80vw;
-        max-width: 1280px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  background-color: #e5e5e5;
+  padding-top: 7rem;
+  padding-left: 150px;
+  &__navbar {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__searchbar {
+    box-sizing: border-box;
+    margin-right: 5rem;
+    width: 369px;
+    height: 43px;
+    left: 209px;
+    top: 130px;
+    padding-left: 10px;
+    background: #fbfcff;
+    border: 1px solid #83a9c4;
+    border-radius: 30px;
+  }
+  &__positionsort {
+    margin-right: 1rem;
+    width: 115px;
+    height: 43px;
+    left: 696px;
+    top: 130px;
+    padding-left: 10px;
+    background: #fbfcff;
+    border: 1px solid #83a9c4;
+    border-radius: 30px;
+  }
+  &__skillsort {
+    width: 115px;
+    height: 43px;
+    left: 841px;
+    top: 129px;
+    padding-left: 10px;
+    background: #fbfcff;
+    border: 1px solid #83a9c4;
+    border-radius: 30px;
+  }
+  &__card-container {
+    // max-width: 80vw;
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
-

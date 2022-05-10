@@ -15,7 +15,7 @@ class App extends Component {
     users: [],
     selectedUser: [],
     islogged: false,
-    loggedinUserId: ""
+    loggedinUserId: "",
   };
 
   componentDidMount() {
@@ -26,42 +26,52 @@ class App extends Component {
 
   getName() {
     // let person = prompt("Please enter your username");
-    let person = "mark-devon"
-    if ( !this.state.islogged && person != null ) {
-      let user = this.state.users.filter((elem) => elem.username === person )[0];
-      this.setState({islogged: true, selectedUser: [ user, ...this.state.selectedUser], loggedinUserId: user.id});     
-    } else if (person == null){
+    let person = "mark-devon";
+    if (!this.state.islogged && person != null) {
+      let user = this.state.users.filter((elem) => elem.username === person)[0];
+      this.setState({
+        islogged: true,
+        selectedUser: [user, ...this.state.selectedUser],
+        loggedinUserId: user.id,
+      });
+    } else if (person == null) {
       this.getName();
     }
   }
 
   componentDidUpdate() {
     this.getName();
-    console.log(this.state.loggedinUserId)
-    console.log(this.state.islogged)  
+    console.log(this.state.loggedinUserId);
+    console.log(this.state.islogged);
   }
   render() {
     return (
       <div className="App">
         <BrowserRouter>
           <Header />
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route exact path="/announcements" component={Announcements} />
-            <Route
-              exact
-              path="/employees"
-              render={(props) => (
-                <EmployeeList users={this.state.users} loggedinUserId={this.state.loggedinUserId} {...props} />
-              )}
-            />
-            <Route
-              exact
-              path="/employees/:id"
-              render={(props) => <User users={this.state.users} {...props} />}
-            />
-          </Switch>
-          <SideBar />
+          <div className="body">
+            <SideBar />
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/announcements" component={Announcements} />
+              <Route
+                exact
+                path="/employees"
+                render={(props) => (
+                  <EmployeeList
+                    users={this.state.users}
+                    loggedinUserId={this.state.loggedinUserId}
+                    {...props}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/employees/:id"
+                render={(props) => <User users={this.state.users} {...props} />}
+              />
+            </Switch>
+          </div>
         </BrowserRouter>
       </div>
     );

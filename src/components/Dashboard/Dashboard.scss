@@ -1,5 +1,6 @@
 .dashboard-main {
   width: 100%;
+  background-color: #e5e5e5;
 }
 .dashboard-info-wrapper {
   display: flex;
@@ -25,32 +26,72 @@
       display: flex;
       margin-left: 2rem;
       width: 51rem;
-      height: 0px;
-      border: 1px solid #bfd2df;
+      height: 0.1rem;
+      background-color: #bfd2df;
     }
   }
 }
 .dashboard-info__description-wrapper {
   display: flex;
 }
+
 .task-wrapper {
   margin-left: 10rem;
 }
 
 .task-progression {
   display: flex;
+  margin-top: 4rem;
+  margin-left: 5rem;
 }
 .task-finished {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 177px;
   height: 105px;
   margin-right: 5rem;
   background-color: #f4f9fd;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
 }
 .task-remaining {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 177px;
   height: 105px;
   background-color: #f4f9fd;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+.my-skills-wrapper {
+  margin-left: 5rem;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 294px;
+  height: 140px;
+  background-color: #f4f9fd;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
 }
 .booking-info-wrapper {
   display: flex;
+  height: 298px;
+  width: 310.11px;
+  flex-direction: column;
+  background: #f4f9fd;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -8,28 +8,49 @@ const Announcements = () => {
       <h3 className="announcements-main__title">New Announcements</h3>
       <div className="announcements-main__wrapper">
         <div className="announcements-main__comfort">
-          <h2 className="announcements-main__comfort__title">
-            COVID-19 comfort level policy in place
-          </h2>
           <div className="announcements-main__comfort__levels">
-            <span></span>
-            <p>Feels comfortable - No mask or social distance requirement.</p>
-            <span></span>
-            <p>Slightly uneasy - Would like to maintain 6 feet distance.</p>
-            <span></span>
-            <p>
-              Very uneasy - Would like to maintain 6 feet of distance and wear a
-              mask.
-            </p>
-            <p>Click below to read full policy. </p>
+            <h2 className="announcements-main__comfort__title">
+              COVID-19 comfort level policy in place
+            </h2>
+            <div className="announcements-main__comfort__levels-top">
+              <div className="announcements-comfort">
+                <div className="comfort-color__green"></div>
+                <p>
+                  Feels comfortable - No mask or social distance requirement.
+                </p>
+              </div>
+              <div className="announcements-comfort">
+                <div className="comfort-color__yellow"></div>
+                <p className="">
+                  Slightly uneasy - Would like to maintain 6 feet distance.
+                </p>
+              </div>
+              <div className="announcements-comfort">
+                <div className="comfort-color__red"></div>
+                <p className="">
+                  Very uneasy - Would like to maintain 6 feet of distance and
+                  wear a mask.
+                </p>
+              </div>
+            </div>
           </div>
+          <p className="announcements-main__comfort__levels-bottom">
+            <Link className="readmore-link" to="">
+              Click below to read full policy.
+            </Link>
+          </p>
         </div>
+
         <div className="feedback-wrapper">
           <p>
             We’re here to help. Please let us know if you have any health and
             safety concerns.
           </p>
-          <button type="button">Share Feedback</button>
+          <div className="announcements-button-container">
+            <button className="announcements-button" type="button">
+              Share Feedback
+            </button>
+          </div>
         </div>
       </div>
       <div className="monthly-data">
@@ -57,7 +78,9 @@ const Announcements = () => {
           <p>MAY 5, 2022</p>
           <p>
             Company enhances health and wellbeing benefits for employees.
-            <Link to="">Read more.</Link>
+            <Link className="readmore-link" to="">
+              Read more.
+            </Link>
           </p>
         </div>
         <div className="latest-announcements__wrapper">
@@ -65,7 +88,9 @@ const Announcements = () => {
           <p>
             Company named one of Canada’s Top Employer that cares for Employees’
             health and safety.
-            <Link to="">Read more.</Link>
+            <Link className="readmore-link" to="">
+              Read more.
+            </Link>
           </p>
         </div>
         <div className="latest-announcements__wrapper">
@@ -73,7 +98,9 @@ const Announcements = () => {
           <p>
             UPCOMING EVENT: On May 15, 2022 is going to be Company’s Employee
             Appreciation Day.
-            <Link to="">Read more.</Link>
+            <Link className="readmore-link" to="">
+              Read more.
+            </Link>
           </p>
         </div>
       </div>
