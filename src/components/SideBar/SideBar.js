@@ -22,7 +22,7 @@ const SideBar = () => {
         <Link to="/">
           <img src={calendar}></img>
         </Link>
-        <Link to="/">
+        <Link className="sidenav__settings" to="/">
           <img src={settings}></img>
         </Link>
       </div>
