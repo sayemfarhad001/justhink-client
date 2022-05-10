@@ -25,22 +25,13 @@ class App extends Component {
   }
 
   getName() {
-    let person = prompt("Please enter your username");
-    if ( 
-          !this.state.islogged 
-          && 
-          person != null 
-          // && 
-          // this.state.loggedinUserId === ""
-      ) {
-      let user = this.state.users.filter((elem) => elem.username === person )
-      // console.log(user[0].id)
-        this.setState({loggedinUserId: user[0].id})     
-        this.setState({islogged: true})
-        // window.location.reload();     
-    } else {
-      // alert("Access denied! Please contact administrator for details.");
-    //   window.location.reload();
+    // let person = prompt("Please enter your username");
+    let person = "mark-devon"
+    if ( !this.state.islogged && person != null ) {
+      let user = this.state.users.filter((elem) => elem.username === person )[0];
+      this.setState({islogged: true, selectedUser: [ user, ...this.state.selectedUser], loggedinUserId: user.id});     
+    } else if (person == null){
+      this.getName();
     }
   }
 
@@ -61,7 +52,7 @@ class App extends Component {
               exact
               path="/employees"
               render={(props) => (
-                <EmployeeList users={this.state.users} {...props} />
+                <EmployeeList users={this.state.users} loggedinUserId={this.state.loggedinUserId} {...props} />
               )}
             />
             <Route

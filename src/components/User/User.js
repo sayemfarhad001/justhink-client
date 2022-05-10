@@ -25,7 +25,7 @@ import Calendar from "../Calendar/Calendar"
 				</div>
 
 				<div className="user__name">
-					<div className="user__text">
+					<div className="user__text user__name__text">
 						<p>{name}</p>
 					</div>
 					<div className="user__status" style={{ backgroundImage: `url(${require(`../../assets/icons/${workfrom}.png`)})` }}></div>
@@ -134,21 +134,33 @@ import Calendar from "../Calendar/Calendar"
 			{/* PROFILE RIGHT */}
 			<div className="user__profile--right">
 				<div className="user__profile--right-top">
-					<div className="user__tasks-container">
-						{ tasks.map ((elem)=>
-							<div key={elem.type} className="user__task">
-								<div className="user__task-icon user__profile__icon" style={{ backgroundImage: `url(${require(`../../assets/icons/${elem.type}.png`)})` }}></div>
-								<h4>{elem.header}</h4>
-								<p className="user__text">Deadline: {elem.deadline}</p>
-							</div>
-						)}
+					<div className="user__profile--right-top-tasks-container">
+						<p className="user__text--title user__text">{name.split(" ")[0]}'s Tasks</p>
+						<div className="user__tasks-container">
+							{ tasks.map ((elem)=>
+								<div key={elem.type} className="user__task">
+									{/* <div className="user__task-icon user__profile__icon" style={{ backgroundImage: `url(${require(`../../assets/icons/${elem.type}.png`)})` }}></div> */}
+									<img src={require(`../../assets/icons/${elem.type}.png`)} alt="" className="user__profile__icon"></img>
+									<div className="user__task__subdiv">
+										<h3 className="user__text user__task__subdiv__text">{elem.header}</h3>
+										<p className="user__text">Deadline: {elem.deadline}</p>
+									</div>
+								</div>
+							)}
+						</div>
 					</div>
-					<div className="user__allskills user__text">
-						{allskills.split(",").join(",")}
+					<div className="user__profile--right-allskills-container">
+						<p className="user__text--title user__text">Skills</p>
+						<div className="user__allskills user__text">
+							<ul>{allskills.split(",").map((elem)=><li className="user__allskills__list-item">{elem}</li>)}</ul>
+						</div>
 					</div>
 				</div>
-				<div className="user__profile--right-bottom">
-					<Calendar calendar={calendar}/>
+				<div className="user__profile--right-bottom-container">
+					<p className="user__text--title user__text">Schedule</p>
+					<div className="user__profile--right-bottom">
+						<Calendar calendar={calendar}/>
+					</div>
 				</div>
 			</div>
 		</div>

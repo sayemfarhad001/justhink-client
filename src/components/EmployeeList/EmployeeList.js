@@ -1,9 +1,8 @@
-// import User from "../User/User"
 import Employee from "../Employee/Employee";
 import "./EmployeeList.scss"
 
-const EmployeeList = ({ users }) => {
-    return ( 
+const EmployeeList = ({ users, loggedinUserId }) => {
+    return (         
         <section className="employee-list">
            <div className="employee-list__navbar">
                 <div className="employee-list__searchbar__container">
@@ -26,7 +25,7 @@ const EmployeeList = ({ users }) => {
                 </div>
             </div>
             <div className="employee-list__card-container">
-                {   users.map(  (elem) => {
+                {   users.filter(elem=>elem.id!==loggedinUserId).map(  (elem) => {
                         return (
                             <Employee
                                 key={elem.id}
