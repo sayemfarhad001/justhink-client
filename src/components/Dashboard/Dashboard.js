@@ -1,6 +1,9 @@
 import React from "react";
 import "./Dashboard.scss";
 import task from "../../assets/images/13929.png";
+import virusIcon from "../../assets/icons/virus.svg";
+import badgeIcon from "../../assets/icons/badge.svg";
+import calendarIcon from "../../assets/icons/calendar-announcements.svg";
 
 export default class Dashboard extends React.Component {
   render() {
@@ -11,9 +14,38 @@ export default class Dashboard extends React.Component {
             <div className="dashboard-wrapper">
               <h3 className="dashboard-title">Announcements</h3>
               <div className="dashboard-info">
-                <p>COVID-19 comfort level policy in place</p>
-                <p>Top Employer Achievement</p>
-                <p>Upcoming Events</p>
+                <div className="dashboard-info__description-wrapper">
+                  <img src={virusIcon} alt="virus-icon" />
+                  <div className="description-container">
+                    <p className="dashboard-info__description">
+                      COVID-19 comfort level policy in place
+                    </p>
+                    <p className="dashboard-info__description">
+                      Red is Feels comfortable - No mask or social distance
+                      requirement. Yellow is slightly uneasy - Would like....
+                    </p>
+                  </div>
+                </div>
+                <span className="dashboard-info__description__divider"></span>
+                <div className="dashboard-info__description-wrapper">
+                  <img src={badgeIcon} alt="badge-icon" />
+                  <p className="dashboard-info__description">
+                    Top Employer Achievement
+                  </p>
+                  <p>
+                    Company named one of Canada’s Top Employer that cares for
+                    Employees’ health and safet
+                  </p>
+                </div>
+                <span className="dashboard-info__description__divider"></span>
+                <div className="dashboard-info__description-wrapper">
+                  <img src={calendarIcon} alt="calendar-icon" />
+                  <p className="dashboard-info__description">Upcoming Events</p>
+                  <p>
+                    May 15, 2022 is going to be Company’s Employee Appreciation
+                    Day
+                  </p>
+                </div>
               </div>
             </div>
             <div className="task-wrapper">
