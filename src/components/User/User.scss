@@ -67,10 +67,11 @@
         align-items: center;
     }
     &__picture{
-        width: 5rem;
-        height: 5rem;
-        background-size: 100px;
+        width: 10rem;
+        height: 10rem;
+        background-size: 15rem;
         background-position: center;
+        background-repeat: no-repeat;
         border: 1.5px solid black;
         border-radius: 50%;
         display: flex;
