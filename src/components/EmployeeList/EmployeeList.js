@@ -39,6 +39,7 @@ const EmployeeList = ({ users }) => {
                                 comfort={elem.comfort}
                                 role={elem.role}
                                 skills={elem.skills}
+                                allskills={elem.skills}
                                 office={elem.office}
                                 // city={elem.city}
                                 // country={elem.country}

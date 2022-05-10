@@ -12,6 +12,7 @@ const Employee = ({
   comfort,
   role,
   skills,
+  allskills,
   office,
 }) => {
   // let background = ;
