@@ -1,21 +1,8 @@
 import React from "react";
-
 import "./Dashboard.scss";
-// import User from "../User/User";
-// import EmployeeList from "../EmployeeList/EmployeeList";
-// import { BrowserRouter, Route, Switch } from "react-router-dom";
 import task from "../../assets/images/13929.png";
 
 export default class Dashboard extends React.Component {
-  // getName() {
-  //   let person = prompt("Please enter your name");
-  //   if (person != null) {
-  //     document.getElementById("demo").innerHTML =
-  //     "Hello " + person + "! How are you today?";
-  //     let user = this.state.users.filter((employee)=> employee.name.toLowerCase() === person.toLowerCase())
-  //     this.setState({selectedUser: [user, ...this.state.selectedUser]})
-  //   }
-  // }
   render() {
     return (
       <main className="dashboard-main">
@@ -35,54 +22,56 @@ export default class Dashboard extends React.Component {
             </div>
           </div>
 
-          {/* <div className="dashboard-right">
-<div className="task-progression-wrapper">
-                   <div className="task-progression">
-                     <div className="task-finished">
-                       <p>4</p>
-                       <p>Tasks finished</p>
-                       </div>
-                     <div className="task-remaining">
-                     <p>3</p>
-                       <p>Tasks remaining</p>
-                     </div>
-                   </div>
-                 </div>
-                 <div className="my-skills-wrapper">
-  <h3>My Skills</h3>
-  <div className="skills">
-    <p>Interface</p>
-    <p>CSS</p>
-    <p>HTML</p>
-    <p>JavaScript</p>
-    <p>jQuery</p>
-    <p>Figma</p>
-    <p>Sketch</p>
-  </div>
-  <div className="booking-wrapper">
-    <h3 className="booking-wrapper__title">Next Booked On-site Date:</h3>
-    <h3 className="booking-wrapper__title">MAY 10, 2022</h3>
-    <div className="booking-info-wrapper">
-      <div className="info-left">
-        <p>Building Name:</p>
-        <p>Address:</p>
-        <p>Floor:</p>
-        <p>Section:</p>
-        <p>Seat: </p>
-        <p>Building Status:</p>
+          <div className="dashboard-right">
+            <div className="task-progression-wrapper">
+              <div className="task-progression">
+                <div className="task-finished">
+                  <p>4</p>
+                  <p>Tasks finished</p>
+                </div>
+                <div className="task-remaining">
+                  <p>3</p>
+                  <p>Tasks remaining</p>
+                </div>
               </div>
-      <div className="info-right">
-      <p>BrainStation</p>
-        <p>460 King St. W</p>
-        <p>10</p>
-        <p>51</p>
-        <p>27</p>
-        <p>Fully Open</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div> */}
+            </div>
+            <div className="my-skills-wrapper">
+              <h3>My Skills</h3>
+              <div className="skills">
+                <p>Interface</p>
+                <p>CSS</p>
+                <p>HTML</p>
+                <p>JavaScript</p>
+                <p>jQuery</p>
+                <p>Figma</p>
+                <p>Sketch</p>
+              </div>
+              <div className="booking-wrapper">
+                <h3 className="booking-wrapper__title">
+                  Next Booked On-site Date:
+                </h3>
+                <h3 className="booking-wrapper__title">MAY 10, 2022</h3>
+                <div className="booking-info-wrapper">
+                  <div className="info-left">
+                    <p>Building Name:</p>
+                    <p>Address:</p>
+                    <p>Floor:</p>
+                    <p>Section:</p>
+                    <p>Seat: </p>
+                    <p>Building Status:</p>
+                  </div>
+                  <div className="info-right">
+                    <p>BrainStation</p>
+                    <p>460 King St. W</p>
+                    <p>10</p>
+                    <p>51</p>
+                    <p>27</p>
+                    <p>Fully Open</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     );
