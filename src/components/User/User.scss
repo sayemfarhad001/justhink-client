@@ -1,6 +1,9 @@
 .user {
+
   &__container {
-    height: 92vh;
+    overflow-x: hidden;
+    padding-top: 4rem;
+    height: 95vh;
     padding-left: 5rem;
     display: flex;
     width: 95%;
