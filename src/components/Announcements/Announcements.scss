@@ -8,6 +8,8 @@
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
+  width: 100vw;
+  margin-top: 5rem;
   &__wrapper {
     display: flex;
   }
@@ -18,8 +20,8 @@
   justify-content: space-between;
   padding-left: 1rem;
   padding-bottom: 1rem;
-  height: 370px;
-  width: 728px;
+  height: 270px;
+  width: 598px;
   background-color: #f4f9fd;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -52,6 +54,7 @@
 .announcements-main__wrapper {
   display: flex;
   justify-content: space-between;
+  width: 1220px;
 }
 .feedback-wrapper {
   display: flex;
@@ -61,7 +64,7 @@
   align-items: center;
   padding: 1rem;
   height: 255px;
-  width: 431px;
+  width: 390px;
   background: #f4f9fd;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -84,6 +87,7 @@
 .monthly-data__numbers {
   display: flex;
   align-items: center;
+  width: 1266px;
 }
 .monthly-data__numbers__wrapper {
   display: flex;
